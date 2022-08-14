@@ -12,3 +12,6 @@ Lovelace Alarmo Card for Home Assistant:
 https://github.com/nielsfaber/alarmo-card
 
 ![](sample.bmp)
+
+# YAML
+name: Jon
