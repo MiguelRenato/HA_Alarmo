@@ -27,10 +27,9 @@ logger:
 
 # Enable Home Assistant API
 api:
-  password: !secret api.ota_password
 
 ota:
-  password: !secret api.ota_password
+  password: !secret ota_password
 
 wifi:
   ssid: !secret wifi_ssid
@@ -114,20 +113,18 @@ binary_sensor:
     pin:
       number: GPIO26
       mode: INPUT_PULLDOWN
-#---------------------------
 # Outdoor Siren
 switch: 
   - platform: gpio
-    name: Outdoor Siren/strobe
-    pin: GPIO27
-#---------------------------
-# Piezo-> 1 long beep and 3 times beep
+    name: Outdoor Siren/Strobe
+    pin: GPIO14
+# Piezo buzzer, beep 3 times
   - platform: gpio
-    pin: GPIO32
+    pin: GPIO13
     inverted: yes
     id: beep
   - platform: template
-    name: 3 Beeps
+    name: Three Beeps
     turn_on_action:
       - switch.turn_on: beep
       - delay: 60ms
@@ -141,7 +138,7 @@ switch:
       - delay: 60ms
       - switch.turn_off: beep
   - platform: template
-    name: 1 Beep
+    name: One Beep
     turn_on_action:
       - switch.turn_on: beep
       - delay: 600ms
