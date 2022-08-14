@@ -1,9 +1,7 @@
 # HA Alarmo
 My Alarm Home Project
 
-Add to Home Assistant:
-
-# HACS:
+# Go to Home Assistant ->HACS and install:
 
 Integration Alarmo for Home Assistant:
 https://github.com/nielsfaber/alarmo
