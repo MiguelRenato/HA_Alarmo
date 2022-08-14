@@ -98,12 +98,14 @@ binary_sensor:
     pin:
       number: GPIO26
       mode: INPUT_PULLDOWN
+#---------------------------
 # Outdoor Siren
 switch: 
   - platform: gpio
     name: Outdoor Siren/strobe
     pin: GPIO27
-# Piezo buzzer, beep 3 times
+#---------------------------
+# Piezo-> 1 long beep and 3 times beep
   - platform: gpio
     pin: GPIO32
     inverted: yes
