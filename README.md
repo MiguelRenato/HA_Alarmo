@@ -13,6 +13,7 @@ https://github.com/nielsfaber/alarmo-card
 
 ![](sample.bmp)
 
+# alarmo-sensors.yaml
 
 ``` yaml
 esphome:
