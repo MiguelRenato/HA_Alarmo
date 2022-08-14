@@ -129,7 +129,7 @@ switch:
     inverted: yes
     id: beep
   - platform: template
-    name: Beep
+    name: 3 Beeps
     turn_on_action:
       - switch.turn_on: beep
       - delay: 60ms
@@ -143,7 +143,7 @@ switch:
       - delay: 60ms
       - switch.turn_off: beep
   - platform: template
-    name: Buzzer
+    name: 1 Beep
     turn_on_action:
       - switch.turn_on: beep
       - delay: 600ms
