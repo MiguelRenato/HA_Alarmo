@@ -1,9 +1,9 @@
-# HA_Alarmo
+# HA Alarmo
 My Alarm Home Project
 
 Add to Home Assistant:
 
-#HACS:
+# HACS:
 
 Integration Alarmo for Home Assistant:
 https://github.com/nielsfaber/alarmo
