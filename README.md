@@ -13,5 +13,13 @@ https://github.com/nielsfaber/alarmo-card
 
 ![](sample.bmp)
 
+
+``` yaml
 # YAML
-name: Jon
+object:
+  attributes:
+    - attr1
+    - attr2
+    - attr3
+  methods: [ getter, setter ]
+```
