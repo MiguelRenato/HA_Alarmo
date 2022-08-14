@@ -5,7 +5,7 @@ Add to Home Assistant:
 
 #HACS:
 
-Integrations Alarmo for Home Assistant:
+Integration Alarmo for Home Assistant:
 https://github.com/nielsfaber/alarmo
 
 Lovelace Alarmo Card for Home Assistant:
