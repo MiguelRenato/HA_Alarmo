@@ -1,5 +1,5 @@
 # HA Alarmo
-My Alarm Home Project
+My Home Alarm Project
 
 # Go to Home Assistant ->HACS and install:
 
