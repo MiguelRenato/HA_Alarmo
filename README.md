@@ -9,6 +9,9 @@ https://github.com/nielsfaber/alarmo
 Lovelace Alarmo Card for Home Assistant:
 https://github.com/nielsfaber/alarmo-card
 
+All credits and thanks go to:
+https://github.com/nielsfaber
+
 ![](sample.bmp)
 
 # alarmo-sensors.yaml
