@@ -60,6 +60,7 @@ binary_sensor:
     pin:
       number: GPIO16
       mode: INPUT_PULLDOWN
+      inverted: True
 #---------------------------
   - platform: gpio
     name: "Zone 2"
@@ -67,6 +68,7 @@ binary_sensor:
     pin:
       number: GPIO17
       mode: INPUT_PULLDOWN
+      inverted: True
 #---------------------------
   - platform: gpio
     name: "Zone 3"
@@ -74,6 +76,7 @@ binary_sensor:
     pin:
       number: GPIO18
       mode: INPUT_PULLDOWN
+      inverted: True
 #---------------------------
   - platform: gpio
     name: "Zone 4"
@@ -81,6 +84,7 @@ binary_sensor:
     pin:
       number: GPIO19
       mode: INPUT_PULLDOWN
+      inverted: True
 #---------------------------
   - platform: gpio
     name: "Zone 5"
@@ -88,6 +92,7 @@ binary_sensor:
     pin:
       number: GPIO21
       mode: INPUT_PULLDOWN
+      inverted: True
 #---------------------------
   - platform: gpio
     name: "Zone 6"
@@ -95,6 +100,7 @@ binary_sensor:
     pin:
       number: GPIO22
       mode: INPUT_PULLDOWN
+      inverted: True
 #---------------------------
   - platform: gpio
     name: "Zone 7"
@@ -102,6 +108,7 @@ binary_sensor:
     pin:
       number: GPIO23
       mode: INPUT_PULLDOWN
+      inverted: True
 #---------------------------
   - platform: gpio
     name: "Zone 8"
@@ -109,6 +116,7 @@ binary_sensor:
     pin:
       number: GPIO25
       mode: INPUT_PULLDOWN
+      inverted: True
 #---------------------------
   - platform: gpio
     name: "Alarm Tamper"
@@ -116,34 +124,45 @@ binary_sensor:
     pin:
       number: GPIO26
       mode: INPUT_PULLDOWN
+      inverted: False
 # Outdoor Siren
 switch: 
   - platform: gpio
     name: Outdoor Siren/Strobe
     pin: GPIO14
-# Piezo buzzer, beep 3 times
+    
+# Piezo buzzer
   - platform: gpio
     pin: GPIO13
     inverted: yes
     id: beep
+    
   - platform: template
-    name: Three Beeps
-    turn_on_action:
-      - switch.turn_on: beep
-      - delay: 60ms
-      - switch.turn_off: beep
-      - delay: 60ms
-      - switch.turn_on: beep
-      - delay: 60ms
-      - switch.turn_off: beep
-      - delay: 60ms
-      - switch.turn_on: beep
-      - delay: 60ms
-      - switch.turn_off: beep
-  - platform: template
-    name: One Beep
+    name: Beep-Short
     turn_on_action:
       - switch.turn_on: beep
       - delay: 600ms
+      - switch.turn_off: beep
+      
+  - platform: template
+    name: Beep-Long
+    turn_on_action:
+      - switch.turn_on: beep
+      - delay: 60000ms
+      - switch.turn_off: beep
+      
+  - platform: template
+    name: Beep-Three Times
+    turn_on_action:
+      - switch.turn_on: beep
+      - delay: 60ms
+      - switch.turn_off: beep
+      - delay: 60ms
+      - switch.turn_on: beep
+      - delay: 60ms
+      - switch.turn_off: beep
+      - delay: 60ms
+      - switch.turn_on: beep
+      - delay: 60ms
       - switch.turn_off: beep
 ```
